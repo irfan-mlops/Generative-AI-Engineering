@@ -134,3 +134,4 @@ print("Symmetric Difference of set1 and set2:", sorted(symmetric_difference_set)
 
 # length of the set
 print("Length of set1:", len(set1)) # Getting the length of the set
+
