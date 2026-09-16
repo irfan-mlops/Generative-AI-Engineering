@@ -19,4 +19,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-print("End of the program.")
+# Display a message indicating the end of the program
+print("End this program.")

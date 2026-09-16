@@ -73,43 +73,64 @@
 
 # dictionaries are mutable, meaning their elements can be changed after creation.
 # function in dictionary: keys(), values(), items(), get(), update(), pop(), popitem
-my_dict = { "age": 25, "city": "New York"}
-print("Dictionary:", my_dict)
-# print("Dictionary['name']:", my_dict["name"]) # Accessing value by key
+# my_dict = { "age": 25, "city": "New York"}
+# print("Dictionary:", my_dict)
+# # print("Dictionary['name']:", my_dict["name"]) # Accessing value by key
 
-# Modifying dictionary
-my_dict["age"] = 26 # Changing the value of an existing key
-print("Modified Dictionary:", my_dict)
+# # Modifying dictionary
+# my_dict["age"] = 26 # Changing the value of an existing key
+# print("Modified Dictionary:", my_dict)
 
-# Adding a new key-value pair to the dictionary
-my_dict["country"] = "USA" # Adding a new key-value pair
-print("Dictionary after adding 'country':", my_dict)
+# # Adding a new key-value pair to the dictionary
+# my_dict["country"] = "USA" # Adding a new key-value pair
+# print("Dictionary after adding 'country':", my_dict)
 
-# Removing a key-value pair from the dictionary
-del my_dict["city"] # Removing a key-value pair
-print("Dictionary after removing 'city':", my_dict)
+# # Removing a key-value pair from the dictionary
+# del my_dict["city"] # Removing a key-value pair
+# print("Dictionary after removing 'city':", my_dict)
 
-# removing a key-value pair using pop()
-removed_value = my_dict.pop("age") # Removing a key-value pair using pop()
-print("Removed Value:", removed_value)
-print("Dictionary after popping 'age':", my_dict)
+# # removing a key-value pair using pop()
+# removed_value = my_dict.pop("age") # Removing a key-value pair using pop()
+# print("Removed Value:", removed_value)
+# print("Dictionary after popping 'age':", my_dict)
 
-# Get method to access value by key
-print("Get 'name':", my_dict.get("name")) # Accessing value by key using get()
+# # Get method to access value by key
+# print("Get 'name':", my_dict.get("name")) # Accessing value by key using get()
 
-# Keys, Values, and Items methods
-print("Keys:", my_dict.keys()) # Getting all keys in the dictionary
-print("Values:", my_dict.values()) # Getting all values in the dictionary
-print("Items:", my_dict.items()) # Getting all key-value pairs in the dictionary
+# # Keys, Values, and Items methods
+# print("Keys:", my_dict.keys()) # Getting all keys in the dictionary
+# print("Values:", my_dict.values()) # Getting all values in the dictionary
+# print("Items:", my_dict.items()) # Getting all key-value pairs in the dictionary
 
-# set1 = {1, 2, 3, 3 ,2, 44, 5}
-# print("Set:", set1) # unique values only
+set1 = {1, 2, 3, 3 ,2, 44, 5}
+print("Set:", set1) # unique values only
 
-# set1.add(100) # Adding an element to the set
-# print("Set after adding 100:", sorted(set1)) # Sorting the set
+set1.add(100) # Adding an element to the set
+print("Set after adding 100:", sorted(set1)) # Sorting the set
 
+# Removing an element from the set
+set1.remove(2) # Removing an element from the set
+print("Set after removing 2:", sorted(set1)) # Sorting the set
 
+# Membership testing
+print("Is 3 in set1?", 3 in set1) # Checking if an element is in the set
 
+# Intersection of two sets
+set2 = {3, 4, 5, 6, 7}
+intersection_set = set1.intersection(set2) # Finding the intersection of two sets
+print("Intersection of set1 and set2:", sorted(intersection_set)) # Sorting the intersection set
 
+# Union of two sets
+union_set = set1.union(set2) # Finding the union of two sets
+print("Union of set1 and set2:", sorted(union_set)) # Sorting the union set
 
+# difference of two sets
+difference_set = set1.difference(set2) # Finding the difference of two sets
+print("Difference of set1 and set2:", sorted(difference_set)) # Sorting the difference
 
+# Symmetric difference of two sets
+symmetric_difference_set = set1.symmetric_difference(set2) # Finding the symmetric difference of two sets
+print("Symmetric Difference of set1 and set2:", sorted(symmetric_difference_set)) # Sorting the symmetric difference set
+
+# length of the set
+print("Length of set1:", len(set1)) # Getting the length of the set
