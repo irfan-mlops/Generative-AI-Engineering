@@ -37,6 +37,7 @@ def nMultiple(a = 1, num  = 1):
 
 def main():
     print(nMultiple(5,3))
-
+    print(nMultiple(5*3,10))
 if __name__ == "__main__":
     main()
+
