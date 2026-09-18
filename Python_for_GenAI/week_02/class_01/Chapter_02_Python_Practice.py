@@ -128,3 +128,10 @@ def main():
 if __name__ == "__main__":
     main()
 print("End of the program.")
+
+numbers = [1, 2, 2, 3, 4, 4, 5, 5]
+
+# Convert list to set
+unique_numbers = set(numbers)
+
+print(unique_numbers)
