@@ -128,13 +128,23 @@ block of code runs only when the Python file is executed directly,
 not when it is imported as a module.
 
 """
-
 def myName():
-    print("My name is Muhammad Irfan. ")
+    print("My name is Jack.")
 
-def myName():
-    print("My name is Muhammad Irfan. ")
-    
-def myName():
-    print("My name is Muhammad Irfan. ")
 
+def age():
+    print("I am 17 years old.")
+
+
+def city():
+    print("I'm from Malta.")
+
+
+def main():
+    myName()
+    age()
+    city()
+
+
+if __name__ == "__main__":
+    main()
