@@ -1,0 +1,3 @@
+This is a sample GenAI text.
+You can write data to the file.
+File handling in Python.
