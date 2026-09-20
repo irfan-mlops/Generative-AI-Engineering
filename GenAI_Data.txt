@@ -1,3 +1,1 @@
-This is a sample GenAI text.
-You can write data to the file.
-File handling in Python.
+My research interests focus on Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and AI-assisted medical imaging. I am particularly interested in developing reliable and explainable GenAI systems for healthcare applications.
