@@ -209,3 +209,21 @@ print("Updated Student Records:")
 with open("students.txt", "r") as file:
     for line in file:
         print(line.strip())
+
+# Add tasks to file
+
+task = input("Enter a task: ")
+
+with open("tasks.txt", "a") as file:
+    file.write(task + "\n")
+
+print("Task added successfully!")
+
+
+# Display all tasks
+
+print("\nYour Tasks:")
+
+with open("tasks.txt", "r") as file:
+    for number, task in enumerate(file, start=1):
+        print(f"{number}. {task.strip()}")
