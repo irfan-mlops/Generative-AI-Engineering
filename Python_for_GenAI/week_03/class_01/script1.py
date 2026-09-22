@@ -148,3 +148,23 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+from datetime import date
+
+today = date.today()
+
+expense = input("Enter expense: ")
+amount = float(input("Enter amount: "))
+
+with open("expenses.txt", "a") as file:
+    file.write(f"{today} | {expense} | {amount}\n")
+
+print("Expense saved successfully!")
+
+
+print("\nExpense History:")
+
+with open("expenses.txt", "r") as file:
+    for line in file:
+        print(line.strip())
