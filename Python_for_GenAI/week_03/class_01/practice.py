@@ -176,3 +176,36 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+# 1. Create a file and write student information
+
+with open("students.txt", "w") as file:
+    file.write("Muhammad Irfan, Data Science, 85\n")
+    file.write("Ali, Computer Science, 78\n")
+    file.write("Ahmed, Software Engineering, 91\n")
+
+
+# 2. Read the file
+
+with open("students.txt", "r") as file:
+    data = file.read()
+
+print("Student Records:")
+print(data)
+
+
+# 3. Add a new student
+
+with open("students.txt", "a") as file:
+    file.write("Hassan, Artificial Intelligence, 88\n")
+
+
+# 4. Read the updated file line by line
+
+print("Updated Student Records:")
+
+with open("students.txt", "r") as file:
+    for line in file:
+        print(line.strip())
