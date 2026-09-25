@@ -1,0 +1,29 @@
+# Numerical computing
+numpy
+
+# Data manipulation and analysis
+pandas
+
+# HTTP requests
+requests
+
+# Data visualization
+matplotlib
+
+# Machine learning
+scikit-learn
+
+# Excel file handling
+openpyxl
+
+# Statistical data visualization
+seaborn
+
+# Web application framework
+flask
+
+# Modern API framework
+fastapi
+
+# Image processing
+pillow
