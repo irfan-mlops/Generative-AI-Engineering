@@ -85,4 +85,18 @@
 # jenny.eat()
 
 
-# Types of Inheritance
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+class Student(Person):
+    def __init__(self,name, course):
+        super().__init__(name)
+        self.course = course
+
+    def describe_course(self):
+        print(f"My name is {self.name} and i have this {self.course} course.")
+
+student1 = Student("Hamza", "genAi")
+student1.describe_course()
