@@ -172,7 +172,7 @@ def main():
         print('Invalid Input provider by user \n' +  str(sys.exc_info()))
 
     else:
-        print('Price Per unit weight: ', round(result),2)
+        print('Price Per unit weight: ', round(result))
 
 if __name__ == "__main__":
     main()
