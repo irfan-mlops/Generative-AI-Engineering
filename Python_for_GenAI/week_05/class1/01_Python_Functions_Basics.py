@@ -48,3 +48,32 @@ introduce("Kim ", 25)
 # Functions make our code more organized.
 # Functions make it easier to work with large programs.
 
+#====================================================================
+
+# print() is used to display something on the screen.
+print("Hello World")
+
+# len() is used to find the length of a value.
+print(len("Python"))
+
+# type() is used to check the data type of a value.
+print(type(10))
+
+# max() is used to find the largest value.
+print(max(10, 20, 30))
+
+# min() is used to find the smallest value.
+print(min(10, 20, 30))
+
+# sum() is used to calculate the total of numbers.
+print(sum([10, 20, 30]))
+
+# abs() is used to get the positive value of a number.
+print(abs(-10))
+
+# round() is used to round a number.
+print(round(3.567))
+
+# Common built-in functions: print(), len(), type(), max(), min(), sum(), abs(), round(), input(), int(), float(), str().
+
+# These functions are already provided by Python, so we don't need to define them ourselves.
