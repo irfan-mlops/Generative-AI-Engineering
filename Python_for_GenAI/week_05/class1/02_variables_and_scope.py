@@ -64,12 +64,116 @@ name = "Irfan"
 
 # display_name()
 
-# How to resolve unBoundlocalerror
-num = 10 # Global Variable
+# ------------------------------------------------------------
+# Resolve UnboundLocalError Using the global Keyword
+# Use case: Use this approach when a function needs to modify
+# a variable that was originally created outside the function.
+# ------------------------------------------------------------
+
+num = 10  # Global variable
+
+
 def display():
-    global num
-    num =  num + 10 # local Variable
-    print("Inside", num)
+    global num  # Tells Python to use the global 'num' variable
+    num += 10   # Updates the global variable
+    print("Inside:", num)
+    return num
 
 display()
-print("outside",num)
+print("Outside:", num)
+
+#====================================================================================
+
+# ------------------------------------------------------------
+# Multiple Return Statements
+# Use case: Return different results based on different
+# conditions.
+# ------------------------------------------------------------
+
+def check_number(num):
+    if num > 0:
+        return "Positive"
+
+    if num < 0:
+        return "Negative"
+
+    return "Zero"
+
+
+print(check_number(10))
+print(check_number(-5))
+print(check_number(0))
+
+# ------------------------------------------------------------
+# Normalize Input Data
+# Use case: ML model ko data dene se pehle values ko 0-1 range
+# mein scale karta hai aur processed data ko return karta hai.
+# ------------------------------------------------------------
+
+def normalize_data(data):
+    min_value = min(data)
+    max_value = max(data)
+
+    normalized_data = [
+        (x - min_value) / (max_value - min_value)
+        for x in data]
+
+    return normalized_data
+
+
+data = [10, 20, 30, 40, 50]
+
+processed_data = normalize_data(data)
+
+print("Original Data:", data)
+print("Normalized Data:", processed_data)
+
+
+# ------------------------------------------------------------
+# Make Prediction
+# Use case: Trained ML model ko input data deta hai aur model ki
+# predicted output ko return karta hai.
+# ------------------------------------------------------------
+
+def make_prediction(model, input_data):
+    prediction = model.predict(input_data)
+    return prediction
+
+# ------------------------------------------------------------
+# Calculate Accuracy
+# Use case: Actual aur predicted labels compare karke model ki
+# accuracy calculate karta hai aur result return karta hai.
+# ------------------------------------------------------------
+
+from sklearn.metrics import accuracy_score
+
+
+def evaluate_model(y_true, y_pred):
+    accuracy = accuracy_score(y_true, y_pred)
+    return accuracy
+
+
+accuracy = evaluate_model(y_test, y_pred)
+
+print("Model Accuracy:", accuracy)
+
+
+# ------------------------------------------------------------
+# Train ML Model
+# Use case: Model ko training data par train karta hai, test data
+# par predictions banata hai, aur trained model + predictions
+# dono return karta hai for later evaluation or deployment.
+# ------------------------------------------------------------
+
+from sklearn.linear_model import LogisticRegression
+
+
+def train_model(X_train, y_train, X_test):
+    model = LogisticRegression()
+
+    model.fit(X_train, y_train)
+
+    predictions = model.predict(X_test)
+
+    return model, predictions
+
