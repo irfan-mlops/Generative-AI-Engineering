@@ -57,10 +57,19 @@ student_info("kim")
 name = "Irfan"
 
 
-def display_name():
-    # Access the global variable inside the function.
-    print(name)
-    print(globals())
+# def display_name():
+#     # Access the global variable inside the function.
+#     print(name)
+#     print(globals())
 
-display_name()
+# display_name()
 
+# How to resolve unBoundlocalerror
+num = 10 # Global Variable
+def display():
+    global num
+    num =  num + 10 # local Variable
+    print("Inside", num)
+
+display()
+print("outside",num)
